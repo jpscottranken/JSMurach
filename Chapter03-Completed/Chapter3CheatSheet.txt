@@ -1,0 +1,250 @@
+//	NOT, AND, OR statments				   
+
+const VOTINGAGE = 18
+let age = parseInt(prompt("What is your age?", "21"))
+
+while (isNaN(age) || (age <= 0) || (age > 125))
+{
+	age = parseInt(prompt("What is your age?", "21"))
+}
+
+if (age < VOTINGAGE)			//	Handles all ages between 1 and 17
+{
+	alert("Sorry. You are too young to vote.")
+}
+else if (age == VOTINGAGE)		//	Handles only age 18
+{
+	alert("Just made it. You can vote.")
+}
+else					//	Handles ages 19 - 125
+{
+	alert("Hello. You can vote.")
+}
+
+//	if, if-else, if-else if-else statements
+					|
+					|
+					|
+					|
+					|
+				   / \
+
+
+const MINTESTSCORE = 0
+const MAXTESTSCORE = 100
+
+//	90 - 100 = A, 80 - 89 = B, 70 - 79 = C, 60 - 69 = D, < 60 = F
+let letterGrade = ""
+let score = parseInt(prompt("What was your score?", "80"))
+
+while (isNaN(score) || (score < MINTESTSCORE) || (score > MAXTESTSCORE))
+{
+	score = parseInt(prompt("What was your score?", "80"))
+}
+
+if (score >= 90)
+{
+	letterGrade = "A"
+}
+
+else if (score >= 80)
+{
+	letterGrade = "B"
+}
+
+else if (score >= 70)
+{
+	letterGrade = "C"
+}
+
+else if (score >= 60)
+{
+	letterGrade = "D"
+}
+
+else
+{
+	letterGrade = "F"
+}
+
+alert (`Your letter grade is: ${letterGrade}`)
+
+
+let number1 = 27
+let number2 = 18
+let magicNumber = 22
+let isMarried = true
+
+if ((number1 >= magicNumber) && (number2 >= magicNumber))
+
+		True							True		True
+		True							False		False
+		False							True		False
+		False							False		False
+
+
+if ((number1 >= magicNumber) || (number2 >= magicNumber))
+
+		True							True		True
+		True							False		True
+		False							True		True
+		False							False		False
+
+if (isMarried)					if (!isMarried)
+
+if (isMarried == true)			if (isMarried == false)
+
+
+let size = prompt("Please enter your size (S, M, L, XL)", "S")
+
+if (size == "S")								switch (size)
+{												{
+	alert ("You are a small")						case "S":
+}														alert ("You are a small")
+														break
+else if (size == "M")								case "M":
+{														alert ("You are a medium")
+	alert ("You are a medium")							break
+}													case "L":
+														alert ("You are a large")
+else if (size == "L")										break
+{													case "XL":
+	alert ("You are a large")							alert ("You are an extra large")
+}														break
+													default:
+else if (size == "XL")									alert ("Size unknown")
+{														break
+	alert ("You are extra large")				}
+}
+
+else
+{
+	alert ("Size unknown")
+}
+
+
+//	Loops
+
+//	Print the numbers from 1 - 10 using: 
+//	a) A while loop. b) A do/while loop. c) A for loop
+
+let lcv = 1					//	Initializing the loop control variable
+while (lcv <= 10)			//	Testing the loop control variable value
+{
+	document.write(lcv)
+	lcv++					//	Change the loop control variable value
+}
+
+//////////////////////////////////
+
+let lcv = 1					//	Initializing the loop control variable
+do
+{
+	document.write(lcv)
+	lcv++					//	Change the loop control variable value
+} while (lcv <= 10)			//	Testing the loop control variable value
+
+//////////////////////////////////
+
+for (lcv = 0; lcv <= 10; ++lcv)
+{
+	document.write(lcv)
+	lcv++					//	Change the loop control variable value
+}
+
+
+//////////////////////////////////
+
+//	Arrays
+
+Sally Jones
+1000 Main Street
+Apt. #1
+Lake St. Louis, MO 63367
+
+1			2			3			4			5			6			7			8
+Scott		Jones		White		Smith		Brown		Black		Green		Kent
+
+let unit1 = "Scott"
+let unit2 = "Jones"
+let unit3 = "White"
+let unit4 = "Smith"
+let unit5 = "Brown"
+let unit6 = "Black"
+let unit7 = "Green"
+let unit8 = "Kent"
+
+let unit[] = {"Scott", "Jones", "White", "Smith", "Brown", "Black", "Green", "Kent"}
+
+let unit = new Array()
+unit[0] = "Scott"
+unit[1] = "Jones"
+unit[2] = "White"
+unit[3] = "Smith"
+unit[4] = "Brown"
+unit[5] = "Black"
+unit[6] = "Green"
+unit[7] = "Kent"
+unit[66] = "Clark"
+
+
+let students = [1000]
+for (let lcv = 0; lcv < students.length; ++lcv)
+{
+	students[[lcv] = parseInt(prompt("Please enter a grade", 88))
+}
+
+
+let months = {"", "January", "February", "March"
+			  "April", "May", "June", "July", "August",
+			  "September", "October", "November", "December"}
+
+months[0]  = ""
+months[1]  = "January"
+months[2]  = "Feruary"
+months[3]  = "March"
+months[4]  = "Aprin"
+months[5]  = "May"
+months[6]  = "June"
+months[7]  = "July"
+months[8]  = "August"
+months[9]  = "September"
+months[10] = "October"
+months[11] = "November"
+months[12] = "December"
+
+let grades = {67, 78, 88, 87, 33, 56, 77, 100, 98, 55}
+let highGrade = -1
+let lowGrade  = 101
+let avgGrade  = 0
+let sum = 0
+
+for (int lcv = 0; lcv < grades.length; ++lcv)
+{
+	if (grades[lcv] < lowGrade)
+	{
+		grades[lcv] = lowGrade
+	}
+
+	if (grades[lcv] > highGrade)
+	{
+		grades[lcv] = highGrade
+	}
+	
+	sum += grades[lcv]
+}
+
+avgGrade = sum / grades.length
+
+alert ("Low Grade = " + lowGrade)
+
+alert ("High Grade = " + highGrade)
+
+alert ("Avg Grade = " + avgGrade)
+
+
+
+
+
+
+
